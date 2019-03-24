@@ -9,8 +9,8 @@ export class KycService {
   private stage = new Subject<Number>();
   private authorizedRep = new Subject<boolean>();
   stage$ = this.stage.asObservable();
-  authorizedRep$ = this.stage.asObservable();
-  viewActive$ = this.stage.asObservable();
+  authorizedRep$ = this.authorizedRep.asObservable();
+  viewActive$ = this.viewActive.asObservable();
   constructor() { }
 
   updateStage(stage) {

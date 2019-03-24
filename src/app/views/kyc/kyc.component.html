@@ -23,19 +23,37 @@
       <mat-card-header style="margin-bottom: 18px;">{{comFin}} your profile</mat-card-header>
       <mat-card-content>
         <div fxLayout="column">
-          <mat-form-field class="form-field">
-              <input matInput type="text" placeholder="PAN of the customer" [(ngModel)]="userData.pan">
+          <mat-form-field class="form-field" *ngIf="stage">
+              <input matInput type="text" placeholder="PAN of the customer"  [(ngModel)]="userData.pan">
               <button mat-button *ngIf="userData.pan" matSuffix mat-icon-button aria-label="Clear" (click)="userData.pan=''">
                 <mat-icon>close</mat-icon>
               </button>
             </mat-form-field>
-            <mat-form-field class="form-field">
+            <mat-form-field class="form-field" *ngIf="stage==2||stage==3">
                 <input matInput type="text" placeholder="Name as per pan" [(ngModel)]="userData.name">
                 <button mat-button *ngIf="userData.name" matSuffix mat-icon-button aria-label="Clear" (click)="userData.name=''">
                   <mat-icon>close</mat-icon>
                 </button>
             </mat-form-field>
-                <mat-form-field class="form-field">
+            <mat-form-field class="form-field" *ngIf="stage==2||stage==3">
+                <input matInput type="email" placeholder="Email" [(ngModel)]="userData.email">
+                <button mat-button *ngIf="userData.email" matSuffix mat-icon-button aria-label="Clear" (click)="userData.email=''">
+                  <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+            <mat-form-field class="form-field" *ngIf="stage==2||stage==3">
+                <textarea matInput type="text" placeholder="Address" [(ngModel)]="userData.address"></textarea>
+                <!-- <button mat-button *ngIf="userData.address" matSuffix mat-icon-button aria-label="Clear" (click)="userData.address=''">
+                  <mat-icon>close</mat-icon> -->
+                <!-- </button> -->
+            </mat-form-field>
+            <mat-form-field class="form-field" *ngIf="stage==2||stage3">
+                <input matInput type="text" placeholder="Phone" [(ngModel)]="userData.phone">
+                <button mat-button *ngIf="userData.phone" matSuffix mat-icon-button aria-label="Clear" (click)="userData.phone=''">
+                  <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+                <!-- <mat-form-field class="form-field">
                     <input matInput type="text" placeholder="Company" [(ngModel)]="company">
                     <button mat-button *ngIf="company" matSuffix mat-icon-button aria-label="Clear" (click)="company=''">
                       <mat-icon>close</mat-icon>
@@ -49,13 +67,35 @@
               <mat-checkbox  class="tosLink" *ngIf="!tos" (change)="checkboxClicked()"
               [(ngModel)]="tosLocal">
             I agree to the Marax &nbsp;<a target="_blank" href="https://marax-ai-legal.sgp1.cdn.digitaloceanspaces.com/MaraxAIToS.pdf">Software and Services Agreement</a>
-          </mat-checkbox>
-          </div>
-          <button class="saveButton" mat-raised-button color="accent" (click)="updateProfile()" [disabled]="!(enableSave && tosLocal)">SAVE</button>
+          </mat-checkbox> -->
+          <!-- </div> -->
+          <button class="saveButton" mat-raised-button color="accent" (click)="buttonPressed()">{{buttonName}}</button>
               </div>
       </mat-card-content>
     </mat-card>
     </div>
+    <mat-card fxLayout="row" fxLayoutAlign="space-around center">
+        <mat-card-header style="margin-bottom: 18px;">Documents</mat-card-header>
+        <mat-card-content></mat-card-content>
+        <mat-card class="documentsCard">
+            <mat-card-header>PAN</mat-card-header>
+            <mat-card-content></mat-card-content>
+            <!-- <mat-card-content><mat-icon>attachment</mat-icon></mat-card-content> -->
+        </mat-card>
+        <mat-card class="documentsCard">
+            <mat-card-header style="margin-bottom: 18px;">{{comFin}} your profile</mat-card-header>
+            <mat-card-content></mat-card-content>
+        </mat-card>
+        <mat-card class="documentsCard">
+            <mat-card-header style="margin-bottom: 18px;">{{comFin}} your profile</mat-card-header>
+            <mat-card-content></mat-card-content>
+        </mat-card>
+        <mat-card class="documentsCard">
+            <mat-card-header>Add</mat-card-header>
+            <mat-card-content><mat-icon>attachment</mat-icon></mat-card-content>
+        </mat-card>
+
+      </mat-card>
     
 </div>
 
