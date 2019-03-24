@@ -47,8 +47,8 @@
                   <mat-icon>close</mat-icon> -->
                 <!-- </button> -->
             </mat-form-field>
-            <mat-form-field class="form-field" *ngIf="stage==2||stage3">
-                <input matInput type="text" placeholder="Phone" [(ngModel)]="userData.phone">
+            <mat-form-field class="form-field" *ngIf="stage==2||stage==3">
+                <input matInput type="number" placeholder="Phone" [(ngModel)]="userData.phone">
                 <button mat-button *ngIf="userData.phone" matSuffix mat-icon-button aria-label="Clear" (click)="userData.phone=''">
                   <mat-icon>close</mat-icon>
                 </button>

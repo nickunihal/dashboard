@@ -32,31 +32,6 @@ export const environment = {
     demo: true,
     url: 'http://localhost',
     services: {
-        feed: {
-            port: '8001',
-            resources: {
-                read: {
-                    endpoint: 'feed',
-                    method: 'get'
-                },
-                updateFeed: {
-                    endpoint: 'feed',
-                    method: 'patch'
-                },
-                editComment: {
-                    endpoint: 'feed/comment',
-                    method: 'patch'
-                },
-                deleteComment: {
-                    endpoint: 'feed/comment',
-                    method: 'delete'
-                },
-                imgSource: {
-                    endpoint: 'feed/images/',
-                    method: 'get'
-                }
-            },
-        },
         authentication: {
             port: '8000',
             resources: {
@@ -66,145 +41,19 @@ export const environment = {
                 }
             },
         },
-        validate: {
-            port: '8003',
+        profile: {
+            port: '8001',
             resources: {
-                read: {
-                    endpoint: 'validate',
-                    method: 'post'
-                }
-            }
-        },
-        integrations: {
-            msg91: {
-                port: '4009',
-                resources: {
-                    read: {
-                        endpoint: 'key',
-                        method: 'get'
-                    },
-                    create: {
-                        endpoint: 'key',
-                        method: 'put'
-                    },
-                    sendMsg: {
-                        create: {
-                            endpoint: 'send',
-                            method: 'put'
-                        },
-                        read: {
-                            endpoint: 'send',
-                            method: 'get'
-                        },
-                    },
-                    delete: {
-                        endpoint: 'key',
-                        method: 'delete'
-                    }
-                }
-            },
-            firebase: {
-                port: '4005',
-                resources: {
-                    read: {
-                        endpoint: 'key',
-                        method: 'get'
-                    },
-                    create: {
-                        endpoint: 'key',
-                        method: 'put'
-                    },
-                    sendMsg: {
-                        create: {
-                            endpoint: 'push',
-                            method: 'put'
-                        },
-                        read: {
-                            endpoint: 'push',
-                            method: 'get'
-                        },
-                    },
-                    delete: {
-                        endpoint: 'key',
-                        method: 'delete'
-                    }
-                }
-            }
-        },
-        segments: {
-            port: '4004',
-            resources: {
-                read: {
-                    endpoint: 'segments',
-                    method: 'get'
-                },
                 create: {
-                    endpoint: 'segments',
-                    method: 'put'
-                },
-                update: {
-                    endpoint: 'segments',
+                    endpoint: 'profile/create',
                     method: 'post'
                 },
-                delete: {
-                    endpoint: 'segment',
-                    method: 'delete'
-                }
-            }
-        },
-        cohorts: {
-            port: '4004',
-            resources: {
-                read: {
-                    one: {
-                        endpoint: 'cohort',
-                        method: 'get'
-                    },
-                    all: {
-                        endpoint: 'cohorts',
-                        method: 'get'
-                    }
-                },
-                create: {
-                    endpoint: 'cohort',
-                    method: 'put'
-                },
                 update: {
-                    endpoint: 'cohort',
+                    endpoint: 'profile/update',
                     method: 'patch'
                 },
-                delete: {
-                    endpoint: 'cohort',
-                    method: 'delete'
-                }
-            }
-        },
-        takeActionNotification: {
-            port: '4008',
-            resources: {
                 read: {
-                    endpoint: 'campaign',
-                    method: 'get'
-                },
-                create: {
-                    endpoint: 'campaign',
-                    method: 'put'
-                },
-                delete: {
-                    endpoint: 'campaign',
-                    method: 'delete'
-                }
-            }
-        },
-        filter: {
-            port: '4002',
-            resources: {
-                getFilters: {
-                    endpoint: 'segment',
-                    method: 'post'
-                },
-                getUsers: {
-                    endpoint: 'segment/infotable',
+                    endpoint: 'profile/get',
                     method: 'post'
                 }
             }
