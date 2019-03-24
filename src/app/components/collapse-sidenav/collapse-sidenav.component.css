@@ -1,0 +1,311 @@
+.mat-icon {
+    position: relative;
+    display: table-cell;
+    width: 60px;
+    height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    color: grey;
+}
+
+.submenus {
+    padding-left: 30px;
+    padding-right: 0px !important;
+    outline-width: 0px;
+    outline-color: transparent;
+    outline-style: none;
+}
+
+.svg-icon-menu {
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 1px;
+}
+
+.svg-icon-submenu {
+    padding-top: 20px;
+    padding-left: 28px;
+}
+
+.mat-expansion-panel-body {
+    padding: 0;
+}
+
+.main-menu:hover,nav.main-menu.expanded {
+    width: 250px;
+    overflow: visible;
+}
+
+.main-menu {
+    background: white;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    height: 100%;
+    left: 0px;
+    width: 60px;
+    overflow: hidden;
+    -webkit-transition: width .05s linear;
+    transition: width .05s linear;
+    -webkit-transform: translateZ(0) scale(1,1);
+    z-index: 1000;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.main-menu li {
+    position: relative;
+    display: block;
+    width: 250px;
+}
+
+.main-menu li>a {
+    position: relative;
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #999;
+    font-family: arial;
+    font-size: 14px;
+    text-decoration: none;
+    -webkit-transform: translateZ(0) scale(1,1);
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+.main-menu .nav-icon {
+    position: relative;
+    display: table-cell;
+    width: 60px;
+    height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+}
+
+.accordion-btn {
+    padding-top:20px !important;
+}
+
+.main-menu .nav-text {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    width: 190px;
+    text-align: start;
+    font-family: 'Roboto';
+    font-weight: 400;
+    color: grey;
+    padding-left: 2px;
+    padding-top: 2px;
+}
+
+.accordion-expansion-btn {
+    margin-left: -24px;
+    margin-right: -24px;
+}
+
+.accordion-expansion-btn:focus {
+    outline-width: 0px;
+    outline-color: transparent;
+    outline-style: none;
+}
+
+.accordion-expansion-btn:hover {
+    background-color: buttonface;
+    cursor: pointer;
+}
+
+mat-expansion-panel-header:hover {
+    background-color: buttonface !important;
+}
+
+
+.main-menu>ul.logout {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.no-touch .scrollable.hover {
+    overflow-y: hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+    overflow-y: auto;
+    overflow: visible;
+}
+
+nav {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+nav ul,nav li {
+    outline: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+    color: #999;
+    background-color: #E0E0E0;
+}
+
+.area {
+    float: left;
+    background: #e2e2e2;
+    width: 100%;
+    height: 100%;
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(https://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+}
+
+.logo-space {
+    padding-bottom: 30px !important;
+}
+
+/* marax logo toggle on hover */
+    .logo-div {
+        height: 65px;
+        width: 251px;
+        background: #475CFE;
+    }
+
+    .logo-1 {
+        display : block;
+        content: url('/assets/marax-first_half_logo.svg');
+        padding-left: 18px;
+        padding-top: 21px;
+        width: 20px;
+        background: #475CFE;
+    }
+    
+    .logo {
+        display: none;
+        content: url('/assets/marax-logo.png');
+        width: 110px;
+        padding-top: 21px !important;
+        background: #475CFE;
+    }
+
+    .main-menu:hover .logo-1 {
+        display: none;
+        content: url('/assets/marax-first_half_logo.svg');
+        width: 30px;
+        height: 30px;
+        background: #475CFE;
+    }
+
+    .main-menu:hover .logo {
+        display : block;
+        content: url('/assets/marax-logo.png');
+        background: #475CFE;
+        padding-left: 18px;
+        padding-top: 18px;
+    }
+/* end */
+
+/* button color on hover and select */
+    .buttons {
+        padding: 0px;
+        color: #000;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .buttons:hover,.buttons:focus {
+        text-decoration: none;
+    }
+
+    .buttons:hover .nav-text {
+        color: #475CFE;
+    }
+
+    .buttons:hover .mat-icon {
+        color: #475CFE;
+    }
+
+    .buttons:focus .mat-icon {
+        color: #475CFE;
+    }
+
+    .buttons:focus .nav-text {
+        color: #475CFE;
+    }   
+/* end */
+
+/* colorstrip on button hover and select */
+    .colorstrip {
+        border-right: 5px white;
+        border-radius: 0px;
+    }
+
+    .buttons:hover .colorstrip {
+        border-right: 5px #475CFE;
+        border-radius: 0px;
+    }
+
+    .buttons:focus .colorstrip {
+       border-right: 5px #475CFE;
+        border-radius: 0px;
+    }
+/* end */
+
+.hr-style {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 0px;
+}
+
+/* user id extension pannel */
+    .mat-expansion-panel-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 14px;
+    }
+
+    .mat-expansion-panel-header-description, .mat-expansion-panel-header-title {
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    .mat-expansion-panel:not([class*=mat-elevation-z]) {
+        box-shadow: none;
+    }
+
+    .currentUser {
+        padding-top: 5px !important;
+        font-size: 14px;
+        font-family: 'Roboto';
+        font-weight: 400;
+    }
+
+    .logout-icon {
+        padding-top: 5px;
+    }
+/* end */
+
+.version {
+    font-weight: 200;
+    font-size: 12px;
+    padding-top: 15px;
+    padding-right: 15px;
+    color: #929EAA;
+}
+
+
+.active {
+    color: #475CFE !important;
+}

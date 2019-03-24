@@ -1,0 +1,96 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~nouislider/distribute/nouislider.min.css";
+@import "~ng-pick-datetime/assets/style/picker.min.css";
+
+text:nth-child(4) {
+    display: none;
+}
+
+.percent-label {
+    font-weight: 200 !important;
+    font-size: 56px !important;
+    text-align: center !important;
+}
+
+body {
+    margin: 0 0 0 0;
+}
+
+ngx-charts-legend {
+    position: absolute;
+    top: 150px;
+}
+
+app-filter-view, app-feed, app-datastory, app-segments, app-integrations, app-login {
+    width: 100%;
+}
+
+app-filter-view {
+    height: 100%;
+}
+
+/* filter component slider */
+
+.mat-drawer-backdrop.mat-drawer-shown {
+    background-color: rgba(0,0,0,0);
+}
+
+.mat-drawer-container {
+    background-color: white;
+}
+
+.noUi-connect{
+    background-color: #E90D8B;
+}
+
+
+.noUi-horizontal {
+    height: 5px;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 16px;
+    height: 16px;
+}    
+
+.noUi-handle {
+    border: 1px solid #E90D8B;
+    border-radius: 30px;
+    background: #E90D8B;
+    cursor: pointer;
+    box-shadow: none;
+}  
+
+.noUi-handle:after, .noUi-handle:before {
+    height: 0px;
+    width: 0px;
+}
+
+
+html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
+    right: -9px;
+    left: auto;
+}
+
+.noUi-pips {
+    color: white;
+}
+
+.noUi-pips-horizontal {
+    padding: 5px 0;
+    height: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* filter component slider end */
+
+.mat-card-title {
+    font-size: 24px !important;
+}
+
+.mat-button.mat-primary, .mat-icon-button.mat-primary, .mat-stroked-button.mat-primary {
+    color: #475CFE;
+}

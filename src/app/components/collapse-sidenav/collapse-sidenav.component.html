@@ -1,0 +1,84 @@
+<div class="area"></div><nav class="main-menu">
+    <!-- menuItemsListMain  -->
+    <ul>
+        <li class="logo-space">
+            <div class="logo-div">
+                <i class="logo-1"></i>
+                <div class="logo"></div>
+            </div>
+        </li>
+        <div *ngFor="let menuItem of menuItemsListMain">
+            <li (click)="selectMenu(menuItem)" *ngIf="menuItem.subMenu.length === 0">
+                <button class="buttons" fxLayout="row" routerLink="{{menuItem.routeLink}}" mat-button>
+                    <mat-icon class="mat-icon" [ngClass]="{active: isActiveMenu(menuItem)}">{{menuItem.icon}}</mat-icon>
+                    <div [ngClass]="{active: isActiveMenu(menuItem)}" class="nav-text">{{menuItem.name}}</div>
+                </button>
+            </li>
+            <li  *ngIf="menuItem.subMenu.length > 0">
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                    <div class="buttons" fxLayout="row" mat-button>
+                                        <mat-icon class="mat-icon svg-icon-menu" [ngClass]="{active: subMenuSelected}" [svgIcon]="menuItem.icon"></mat-icon>
+                                        <div [ngClass]="{active: subMenuSelected}" class="nav-text accordion-btn">{{menuItem.name}}</div>
+                                    </div>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div class="accordion-expansion-btn" fxLayoutAlign="center" *ngFor="let subMenuItem of menuItem.subMenu">
+                            <div class="submenus" mat-button fxFlex="100%" (click)="selectMenu(subMenuItem)" fxLayout="row" routerLink="/datastory" [queryParams]=subMenuItem.data>
+                                <mat-icon class="mat-icon svg-icon-submenu" [ngClass]="{active: isActiveMenu(subMenuItem)}" [svgIcon]="subMenuItem.icon"></mat-icon>
+                                <div  class="nav-text accordion-btn" [ngClass]="{active: isActiveMenu(subMenuItem)}">{{subMenuItem.name}}</div>
+                            </div>
+                        </div> 
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </li> 
+        </div>
+    </ul>
+
+    <!-- menuItemsListOptions -->
+    <ul class="logout">
+        <hr class="hr-style">
+        <div *ngFor="let menuItem of menuItemsListOptions">
+            <li fxLayout="row" (click)="selectOption(menuItem)">
+                    <button class="buttons" fxLayout="row" routerLink="{{menuItem.routeLink}}" mat-button>
+                        <mat-icon class="mat-icon" [ngClass]="{active: isActiveOption(menuItem)}">{{menuItem.icon}}</mat-icon>
+                        <span class="nav-text" [ngClass]="{active: isActiveOption(menuItem)}">{{menuItem.name}}</span>  
+                    </button>
+            </li>
+        </div> 
+        <!-- help button -->
+        <li>
+            <a class="buttons" href="http://docs.marax.ai/">
+                <mat-icon class="mat-icon">help</mat-icon>
+                <span class="nav-text">
+                    Help
+                </span>
+            </a>
+        </li> 
+        <!-- user account  -->
+        <li>
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <ngx-avatar fxFlex="15%" [style]="customStyle" size="30" [name]="currentUser"></ngx-avatar>
+                            <span class="nav-text currentUser" fxFlexOffset="10px">{{currentUser}}</span>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+
+                    <div fxLayoutAlign="center">
+                        <button (click)="logout()" mat-button fxFlex="100%" fxLayout="row">
+                            <mat-icon class="logout-icon" fxFlex="50%" fxFlexOffset="20px">lock_outline</mat-icon>
+                            <div fxFlex="50%" fxLayoutAlign="center">Logout</div>
+                        </button>
+                    </div> 
+                </mat-expansion-panel>
+            </mat-accordion>
+        </li>  
+        <div class="version" fxLayoutAlign="end">{{version}}</div>
+    </ul>
+</nav>
+
+

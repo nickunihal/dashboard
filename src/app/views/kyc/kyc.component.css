@@ -1,0 +1,114 @@
+  
+  .icon {
+    font-size: 50px;
+  }
+  
+  
+  .modal-text {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+  }
+  
+  .add-int-button {
+    width: 14vw;
+  }
+  
+  .integration-row {
+    margin-bottom: 20px;
+  }
+  
+  /* End mat-card when there is no card */
+  
+  mat-toolbar  {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    /* z-index: 999999; */
+    padding-left: 60px;
+    padding-right: 40px;
+  }
+    
+  .fill-remaining-space {
+    flex: 1 1 auto;
+  }
+  
+  .view-heading {
+      padding: 0 16px;
+  }
+  
+  .toolbar-button {
+    margin-left: 24px;
+  }
+  
+  .mat-button {
+    padding: 0 10px;
+  
+  }
+  
+  .view {
+    margin: auto;
+    margin-top: 105px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+
+  .container {
+    width: 60%;
+    margin: auto;
+  }
+  
+  .view-title-div {
+    margin-left: 2.2vw;
+  }
+  
+  .view-title-text {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+  }
+  
+  .cardRow {
+    width: 95%;
+    margin: auto;
+  }
+  
+  .card {
+    padding-top: 10px;
+  }
+  .form-field {
+    max-width: 600px;
+    margin: auto;
+}
+
+mat-card {
+    width: 800px;
+}
+
+.profileCard {
+    margin: 24px;
+}
+
+.tosLink {
+    font-size: 10px;
+    margin-top: 20px;
+}
+
+.passCta:hover {
+    cursor: pointer;
+}
+
+.passCta {
+    margin: auto;
+    font-size: 10px;
+    margin-top: 20px;
+    margin-bottom: 7px;
+    color: blue;
+}
+
+.saveButton {
+    margin-top: 20px;
+}
+.row {
+  margin-top: 150px;
+}

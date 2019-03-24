@@ -1,0 +1,56 @@
+<div class="container" fxLayout="row wrap" fxLayoutGap="5%" fxLayoutAlign="center">
+	<!-- image -->
+	<div class="image" fxFlex fxHide.xs="true" fxFlex="55%" fxFlex.sm="50%" fxFlex.md="65%"> </div>
+	<!-- login card -->
+	<div class="loginView" fxFlex fxFlex="25%" fxFlex.sm="35%" fxFlex.xs="100%" >
+		<div class="login-card-column" fxLayoutAlign="center center" fxFlex="100%" fxLayout="row">
+			<mat-card fxFlex="100%" fxFlex.xs="75%">
+				<div class="logo"></div>
+				<mat-card-title fxLayoutAlign="center">Sign in to {{brandName}}</mat-card-title>
+				<h4 class="sub-title" fxLayoutAlign="center">{{brandName}}.filewan.com</h4>
+				<mat-card-content fxLayout="column" fxLayoutAlign="center">
+					<div fxLayout="column" fxLayoutGap="5px">
+						<h4 class="label" fxFlexAlign="start">Username</h4>
+						<mat-form-field fxFlex  floatPlaceholder="never">	
+							<input matInput [(ngModel)]="loginData.username" [formControl]="usernameFormControl"  placeholder="" (keyup.enter)="usernamePressed()" id="usernameField">
+							<!-- clear button -->
+							<!-- <button class="closeBtn" mat-button *ngIf="loginData.email" matSuffix mat-icon-button aria-label="Clear" (click)="loginData.email=''">
+									<mat-icon>close</mat-icon> 
+							</button> -->
+						</mat-form-field>
+					</div>
+					<div fxLayout="column" fxLayoutGap="5px">
+						<h4 class="label" fxFlexAlign="start">Password</h4>
+						<mat-form-field fxFlex floatPlaceholder="never">
+						<input matInput type="password" [(ngModel)]="loginData.password" [formControl]="passwordFormControl" placeholder="password" (keyup.enter)="passwordPressed()" id="passwordField">
+						<!-- clear button -->
+						<!-- <button mat-button *ngIf="loginData.password" matSuffix mat-icon-button aria-label="Clear" (click)="loginData.password=''">
+							<mat-icon>close</mat-icon>
+						</button> -->
+						</mat-form-field>
+					</div>
+					<div fxLayout="column" fxLayoutGap="5px">
+						<h4 class="label" fxFlexAlign="start">Role</h4>
+						<mat-form-field fxFlex  floatPlaceholder="never">	
+							<input matInput [(ngModel)]="loginData.role" [formControl]="roleFormControl"  placeholder="" (keyup.enter)="rolePressed()" id="roleField">
+							<!-- clear button -->
+							<!-- <button class="closeBtn" mat-button *ngIf="loginData.email" matSuffix mat-icon-button aria-label="Clear" (click)="loginData.email=''">
+									<mat-icon>close</mat-icon> 
+							</button> -->
+						</mat-form-field>
+					</div>
+					<mat-error *ngIf="error">
+						Invalid username/password/role
+					</mat-error>
+				</mat-card-content>
+				<mat-card-actions class="button" fxLayout="row">
+					<button fxFlex="100" id="validateButton" class="signin-button" mat-raised-button color="accent" (click)="login()"
+					[disabled]="loggingIn">&nbsp;Sign In</button>
+				</mat-card-actions>
+				<mat-card-footer *ngIf="false" fxLayout="row" fxLayoutAlign="space-around center">
+					<div>Forgot password?</div>
+				</mat-card-footer>
+			</mat-card>
+		</div>
+	</div>
+</div>

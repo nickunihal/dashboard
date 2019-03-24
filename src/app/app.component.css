@@ -1,0 +1,14 @@
+.sidenav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999999;
+}
+
+router-outlet {
+  margin-left: 61px;
+}
+
+.rootDiv {
+  height: 100%;
+}
